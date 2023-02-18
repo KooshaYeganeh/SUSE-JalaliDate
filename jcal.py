@@ -40,7 +40,7 @@ try:
     elif sys.argv[1] == "-v" or sys.argv[1] == "--verbose":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
         print(Fore.GREEN + Style.BRIGHT +  f"{main_date}")
-        print(Fore.GREEN + Style.BRIGHT + f"{digit}")
+        print(Fore.GREEN + Style.BRIGHT + f"\t{digit}")
     elif sys.argv[1] == "-i" or sys.argv[1] == "--info":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
         print(Fore.GREEN + Style.BRIGHT + f"{info}")
