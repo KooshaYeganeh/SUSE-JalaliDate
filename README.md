@@ -2,17 +2,14 @@
 JalaliDate For SUSE 
 
 
-
-
-
-
-
+![openSUSE](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/OpenSUSE_Logo.svg/400px-OpenSUSE_Logo.svg.png?20210522053639)
 
 
 ## Install
 
-
-
+```
+wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp mycal /usr/bin && echo "mycal installed [ OK ]"
+```
 
 ### Create Installer File
 
@@ -24,25 +21,25 @@ pyinstaller jcal.py -n mycal --onefile && sudo cp dist/mycal /usr/bin && rm -rf 
 ## Run
 
 
-Normal Run :
+**Normal Run :**
 
 ```
 mycal
 ```
 
--v or --verbose
+**-v** or **--verbose**
 
 ```
 mycal --verbose
 ```
 
--i or --info
+**-i** or **--info**
 
 ```
 mycal --info
 ```
 
--d or --digit
+**-d** or **--digit**
 
 ```
 mycal --digit
