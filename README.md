@@ -11,6 +11,19 @@
 wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp mycal /usr/bin && echo "mycal installed [ OK ]"
 ```
 
+`**Note :** To continue developing the JalaliDate, the development environment must be created :`
+
+After downloading and going to the software directory 
+
+**1- install virtualenv and the next step is to install pip packages.**
+**2- activate virtual enviroment**
+**3- Install python Packages**
+
+> My pip is pip3.9
+
+```
+sudo pip3.9 install virtualenv && source venv/bin/activate && pip3.9 install -r requirements.txt
+```
 ### Create Installer File
 
 ```
