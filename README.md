@@ -8,7 +8,7 @@
 ## Install
 
 ```
-wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp mycal /usr/bin && echo "mycal installed [ OK ]"
+wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp susejcal /usr/bin && echo "susejcal installed [ OK ]"
 ```
 
 **Note :** To continue **Developing** the JalaliDate, the development environment must be created :
@@ -27,7 +27,7 @@ sudo pip3.9 install virtualenv && source venv/bin/activate && pip3.9 install -r 
 ### Create Installer File
 
 ```
-pyinstaller jcal.py -n mycal --onefile && sudo cp dist/mycal /usr/bin && rm -rf dist build && rm mycal.spec && echo "Installer File Created [ OK ]"
+pyinstaller susejcal.py -n susejcal --onefile && sudo cp dist/susejcal /usr/bin && rm -rf dist build && rm susejcal.spec && echo "Installer File Created [ OK ]"
 ```
 
 
@@ -37,30 +37,30 @@ pyinstaller jcal.py -n mycal --onefile && sudo cp dist/mycal /usr/bin && rm -rf 
 **Normal Run :**
 
 ```
-mycal
+susejcal
 ```
 
 **-v** or **--verbose**
 
 ```
-mycal --verbose
+susejcal --verbose
 ```
 
 **-i** or **--info**
 
 ```
-mycal --info
+susejcal --info
 ```
 
 **-d** or **--digit**
 
 ```
-mycal --digit
+susejcal --digit
 ```
 
 
 ## Remove 
 
 ```
-sudo rm /usr/bin/mycal
+sudo rm /usr/bin/susejcal
 ```
