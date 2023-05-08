@@ -8,7 +8,7 @@
 ## Install
 
 ```
-wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate.main && sudo cp susejcal /usr/bin && echo "susejcal installed [ OK ]"
+cd /tmp && wget https://github.com/KooshaYeganeh/SUSE-JalaliDate/archive/refs/heads/main.zip && unzip main.zip && cd SUSE-JalaliDate-main && sudo cp susejcal /usr/bin && cd /tmp && echo "susejcal installed [ OK ]"
 ```
 
 **Note :** To continue **Developing** the JalaliDate, the development environment must be created :
