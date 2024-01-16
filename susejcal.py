@@ -33,19 +33,19 @@ info = "> Developer : koosha Yeganeh\n> GitHub : https://github.com/KooshaYegane
 try:
     if sys.argv[1] == "-h" or sys.argv[1] == "--human":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
-        print(Fore.GREEN + Style.BRIGHT +  f"{main_date}")
+        print(Fore.GREEN + Style.BRIGHT +  f"{main_date}" + Fore.RESET )
     elif sys.argv[1] == "-d" or sys.argv[1] == "--digit":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
-        print(Fore.GREEN + Style.BRIGHT +  f"\t{digit}")
+        print(Fore.GREEN + Style.BRIGHT +  f"\t{digit}" + Fore.RESET )
     elif sys.argv[1] == "-v" or sys.argv[1] == "--verbose":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
-        print(Fore.GREEN + Style.BRIGHT +  f"{main_date}")
-        print(Fore.GREEN + Style.BRIGHT + f"\t{digit}")
+        print(Fore.GREEN + Style.BRIGHT +  f"{main_date}" + Fore.RESET )
+        print(Fore.GREEN + Style.BRIGHT + f"\t{digit}" + Fore.RESET )
     elif sys.argv[1] == "-i" or sys.argv[1] == "--info":
         print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
-        print(Fore.GREEN + Style.BRIGHT + f"{info}")
+        print(Fore.GREEN + Style.BRIGHT + f"{info}" + Fore.RESET)
 
 except:
     print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate --- ")
-    print(Fore.GREEN + Style.BRIGHT +  f"{main_date}")
-    print(Fore.GREEN + Style.BRIGHT + f"\t{digit}")
+    print(Fore.GREEN + Style.BRIGHT +  f"{main_date}" + Fore.RESET)
+    print(Fore.GREEN + Style.BRIGHT + f"\t{digit}" + Fore.RESET )
