@@ -4,6 +4,8 @@ import pytz
 import sys
 import platform
 from colorama import init, Fore, Style
+import ipaddress
+
 
 # Initialize colorama
 init(autoreset=True)
@@ -11,14 +13,10 @@ init(autoreset=True)
 # ASCII art for openSUSE logo
 opensuse_logo = """
 
-
-
 ┏┓┳┳┏┓┏┓  ┏┳   ┓
 ┗┓┃┃┗┓┣    ┃┏┏┓┃
 ┗┛┗┛┗┛┗┛  ┗┛┗┗┻┗
                 
-
-
 """
 
 # Display openSUSE logo at the start
@@ -75,12 +73,15 @@ try:
             print(Fore.GREEN + Style.BRIGHT + f"Today is: {weekday}")
         elif arg in ["-c", "--convert"]:
             if len(sys.argv) >= 5:
-                g_year, g_month, g_day = int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4])
-                gregorian_date = datetime.date(g_year, g_month, g_day)
-                jalali_date = JalaliDate.from_gregorian(gregorian_date)
-                print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate ---")
-                print(Fore.GREEN + Style.BRIGHT + f"Gregorian Date: {gregorian_date}")
-                print(Fore.GREEN + Style.BRIGHT + f"Jalali Date: {jalali_date}")
+                try:
+                    g_year, g_month, g_day = int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4])
+                    gregorian_date = datetime.date(g_year, g_month, g_day)
+                    jalali_date = JalaliDate.from_gregorian(gregorian_date)
+                    print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate ---")
+                    print(Fore.GREEN + Style.BRIGHT + f"Gregorian Date: {gregorian_date}")
+                    print(Fore.GREEN + Style.BRIGHT + f"Jalali Date: {jalali_date}")
+                except ValueError as e:
+                    print(Fore.RED + f"Error: {e}. Please ensure the date format is YYYY MM DD.")
             else:
                 print(Fore.RED + "Error: Please provide a Gregorian date in the format: -c YYYY MM DD")
         elif arg in ["-m", "--message"]:
@@ -92,7 +93,6 @@ try:
                 print(Fore.RED + "Error: Please provide a custom message.")
         elif arg in ["-s", "--system"]:
             system_info = (f"{Fore.YELLOW}System: {platform.system()}\n"
-                           f"{Fore.YELLOW}Node: {platform.node()}\n"
                            f"{Fore.YELLOW}Release: {platform.release()}\n"
                            f"{Fore.YELLOW}Version: {platform.version()}\n"
                            f"{Fore.YELLOW}Machine: {platform.machine()}\n"
@@ -101,7 +101,7 @@ try:
             print(system_info)
         elif arg in ["--help"]:
             print(Fore.GREEN + Style.BRIGHT + "--- openSUSE JalaiDate ---")
-            print(Fore.YELLOW + "Usage: script.py [options]")
+            print(Fore.YELLOW + "Usage: susejcal.py [options]")
             print(Fore.YELLOW + "Options:")
             print(Fore.YELLOW + "\t-h, --human\tShow human-readable date")
             print(Fore.YELLOW + "\t-d, --digit\tShow date in digits")
