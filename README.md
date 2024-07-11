@@ -106,4 +106,3 @@ If you'd like to contribute to this project, please fork the repository and subm
 
 ---
 
-Feel free to adjust any sections as needed to fit your project's specifics.
